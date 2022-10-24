@@ -1,0 +1,53 @@
+.container {
+  width: 50%;
+  margin: auto;
+  border: 2px solid black;
+  height: 100vh;
+  border-top: none;
+  border-bottom: none;
+  padding: 20px;
+}
+
+.nac_container {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  border: 4px black solid;
+  padding: 5px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+main {
+  text-align: center;
+}
+.nac_container > ul {
+  display: flex;
+  list-style: none;
+}
+
+.nac_container > ul > li {
+  margin-right: 10px;
+}
+
+main form div {
+  padding: 10px;
+}
+
+#title,
+#author {
+  border: 2px solid black;
+  padding: 5px;
+}
+
+#btn {
+  padding: 5px;
+}
+
+footer {
+  margin-top: 20px;
+  border: 2px black solid;
+}
