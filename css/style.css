@@ -33,6 +33,10 @@ main{
     justify-content: space-between;
 }
 
+#booklist > li:nth-child(odd){
+    background-color: #dddddd;
+}
+
 .container{
     width: 50%;
     margin: auto;
