@@ -15,6 +15,7 @@
   border: 4px black solid;
   padding: 5px;
 }
+
 header {
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@ header {
 main {
   text-align: center;
 }
+
 .nac_container > ul {
   display: flex;
   list-style: none;
