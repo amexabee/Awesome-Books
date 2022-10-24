@@ -31,6 +31,7 @@ main{
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
+    padding: 5px;
 }
 
 #booklist > li:nth-child(odd){
