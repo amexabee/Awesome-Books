@@ -1,0 +1,16 @@
+header{
+    display: inline-flex;
+}
+header > ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+header > ul > li{
+   margin-right: 10px;
+}
+
+#booklist{
+    list-style: none;
+}
+
