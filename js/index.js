@@ -1,3 +1,5 @@
+/* eslint no-use-before-define: ["error", {"functions":false}] */
+
 const bookListView = document.getElementById('booklist');
 
 let bookList = JSON.parse(localStorage.getItem('books'));
