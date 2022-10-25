@@ -1,4 +1,4 @@
-/*eslint no-undef: "error"*/
+/* eslint no-undef: "error" */
 
 const bookListView = document.getElementById('booklist');
 
@@ -8,7 +8,9 @@ function initiew() {
   bookListManager.bookList.forEach((element) => {
     const liNode = document.createElement('li');
     const pNode = document.createElement('p');
-    const bookKText = document.createTextNode(`"${element.name}" by ${element.author}`);
+    const bookKText = document.createTextNode(
+      `"${element.name}" by ${element.author}`,
+    );
     pNode.appendChild(bookKText);
     const buttonNode = document.createElement('button');
     const removeKText = document.createTextNode('Remove');
