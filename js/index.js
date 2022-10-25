@@ -1,3 +1,5 @@
+/*eslint no-undef: "error"*/
+
 const bookListView = document.getElementById('booklist');
 
 function initiew() {

@@ -1,3 +1,5 @@
+/*eslint no-undef: "error"*/
+
 class Book {
   constructor(name, author, id) {
     this.name = name;
