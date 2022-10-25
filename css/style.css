@@ -28,7 +28,7 @@ main {
 #booklist {
   list-style: none;
   border: 2px solid black;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
 }
 
 #booklist > li {
@@ -37,13 +37,13 @@ main {
   justify-content: space-between;
 }
 
-#booklist > li > button{
+#booklist > li > button {
   max-height: 30px;
   margin: auto 0;
   margin-right: 5px;
 }
 
-#booklist > li > p{
+#booklist > li > p {
   margin-left: 5px;
 }
 
