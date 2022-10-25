@@ -11,6 +11,6 @@ document.getElementById('btn').addEventListener('click', (event) => {
   const bookanme = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const newBook = new Book(bookanme, author, new Date().getTime());
-  new BookListManger().addNewBook(newBook)
+  new BookListManger().addNewBook(newBook);
   document.location.href = './index.html';
 });
