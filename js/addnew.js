@@ -7,11 +7,11 @@ class Book {
   }
 }
 
-document.getElementById("btn").addEventListener("click", (event) => {
+document.getElementById('btn').addEventListener('click', (event) => {
   event.preventDefault();
-  const bookanme = document.getElementById("title").value;
-  const author = document.getElementById("author").value;
+  const bookanme = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
   const newBook = new Book(bookanme, author, new Date().getTime());
   new BookListManger().addNewBook(newBook);
-  document.location.href = "./index.html";
+  document.location.href = './index.html';
 });
