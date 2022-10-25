@@ -9,7 +9,7 @@ if (bookList == null) {
 
 function removeBook(book) {
   bookList = bookList.filter(
-    (singleBook) => book.name !== singleBook.name && book.author !== singleBook.author,
+    (singleBook) => book.id !== singleBook.id
   );
   localStorage.setItem('books', JSON.stringify(bookList));
   initiew();

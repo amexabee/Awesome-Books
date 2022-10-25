@@ -1,7 +1,8 @@
 class Book {
-  constructor(name, author) {
+  constructor( name, author, id) {
     this.name = name;
     this.author = author;
+    this.id = id
   }
 }
 
@@ -19,6 +20,7 @@ document.getElementById('btn').addEventListener('click', (event) => {
   event.preventDefault();
   const bookanme = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  const newBook = new Book(bookanme, author);
+  const newBook = new Book(bookanme, author, new Date().getTime());
   addNewBook(newBook);
+  document.location.href="./index.html";
 });
