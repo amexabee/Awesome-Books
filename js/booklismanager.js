@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 class BookListManger {
   constructor() {
     this.bookList = JSON.parse(localStorage.getItem('books'));
