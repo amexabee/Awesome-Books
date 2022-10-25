@@ -1,3 +1,4 @@
+
 class Book {
   constructor(name, author, id) {
     this.name = name;
@@ -6,14 +7,21 @@ class Book {
   }
 }
 
-let bookList = JSON.parse(localStorage.getItem('books'));
-if (bookList == null) {
-  bookList = [];
-}
 
-function addNewBook(book) {
-  bookList.push(book);
-  localStorage.setItem('books', JSON.stringify(bookList));
+
+class BookListManger{
+   constructor(){
+      this.bookList = JSON.parse(localStorage.getItem('books'));
+      if (this.bookList == null) {
+        this.bookList = [];
+      }
+   }
+
+   addNewBook(book){
+    this.bookList.push(book);
+    localStorage.setItem('books', JSON.stringify(this.bookList));
+  }
+   
 }
 
 document.getElementById('btn').addEventListener('click', (event) => {
@@ -21,6 +29,6 @@ document.getElementById('btn').addEventListener('click', (event) => {
   const bookanme = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const newBook = new Book(bookanme, author, new Date().getTime());
-  addNewBook(newBook);
+  new BookListManger().addNewBook(newBook)
   document.location.href = './index.html';
 });
