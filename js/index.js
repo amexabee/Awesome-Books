@@ -1,21 +1,21 @@
-/* eslint no-undef: "error" */
+/* eslint-disable no-undef */
 
-const bookListView = document.getElementById('booklist');
+const bookListView = document.getElementById("booklist");
 
 function initiew() {
-  bookListView.innerHTML = '';
+  bookListView.innerHTML = "";
   const bookListManager = new BookListManger();
   bookListManager.bookList.forEach((element) => {
-    const liNode = document.createElement('li');
-    const pNode = document.createElement('p');
+    const liNode = document.createElement("li");
+    const pNode = document.createElement("p");
     const bookKText = document.createTextNode(
-      `"${element.name}" by ${element.author}`,
+      `"${element.name}" by ${element.author}`
     );
     pNode.appendChild(bookKText);
-    const buttonNode = document.createElement('button');
-    const removeKText = document.createTextNode('Remove');
+    const buttonNode = document.createElement("button");
+    const removeKText = document.createTextNode("Remove");
     buttonNode.appendChild(removeKText);
-    buttonNode.addEventListener('click', (event) => {
+    buttonNode.addEventListener("click", (event) => {
       event.preventDefault();
       bookListManager.removeBook(element, () => {
         initiew();
@@ -28,9 +28,9 @@ function initiew() {
 }
 
 window.addEventListener(
-  'load',
+  "load",
   () => {
     initiew();
   },
-  false,
+  false
 );
