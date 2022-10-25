@@ -1,25 +1,21 @@
 const bookListView = document.getElementById('booklist');
 
-class BookListManger{
-  constructor(){
-     this.bookList = JSON.parse(localStorage.getItem('books'));
-     if (this.bookList == null) {
-       this.bookList = [];
-     }
+class BookListManger {
+  constructor() {
+    this.bookList = JSON.parse(localStorage.getItem('books'));
+    if (this.bookList == null) {
+      this.bookList = [];
+    }
   }
-
 
   removeBook(book, callBack) {
     this.bookList = this.bookList.filter(
       (singleBook) => book.id !== singleBook.id,
     );
     localStorage.setItem('books', JSON.stringify(this.bookList));
-    callBack()
+    callBack();
   }
-  
-  
 }
-
 
 function initiew() {
   bookListView.innerHTML = '';
@@ -35,7 +31,7 @@ function initiew() {
     buttonNode.addEventListener('click', (event) => {
       event.preventDefault();
       bookListManager.removeBook(element, () => {
-         initiew()
+        initiew();
       });
     });
 
