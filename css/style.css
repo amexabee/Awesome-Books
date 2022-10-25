@@ -27,13 +27,24 @@ main {
 
 #booklist {
   list-style: none;
+  border: 2px solid black;
+  padding-inline-start: 0px;
 }
 
 #booklist > li {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
-  padding: 5px;
+}
+
+#booklist > li > button{
+  max-height: 30px;
+  margin: auto 0;
+  margin-right: 5px;
+}
+
+#booklist > li > p{
+  margin-left: 5px;
 }
 
 #booklist > li:nth-child(odd) {
