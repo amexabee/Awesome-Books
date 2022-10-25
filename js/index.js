@@ -1,4 +1,4 @@
-/*eslint no-undef: "error"*/
+/* eslint-disable no-undef */
 
 const bookListView = document.getElementById('booklist');
 

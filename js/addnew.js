@@ -1,4 +1,4 @@
-/*eslint no-undef: "error"*/
+/* eslint-disable no-undef */
 
 class Book {
   constructor(name, author, id) {
