@@ -14,31 +14,33 @@
                 <h4>Awesome Books</h4>
     
                 <ul>
-                    <li> <a href="#">List |</a> </li>
-                    <li> <a href="addnew.html"> Add new |</a> </li>
-                    <li> <a href="contact.html">Contact</a> </li>
+                    <li> <a id="home" href="#home">List |</a> </li>
+                    <li> <a id="addnew" href="#addnew"> Add new |</a> </li>
+                    <li> <a id="contact" href="#contact">Contact</a> </li>
                 </ul>
             </div>
             
             <p id="nav_date">March 17, 2022</p>
         </header>
         <main>
-            <h1 class="main_titlte">All awesome books</h1>
-            <ul id="booklist">
-                <li>
-                    <p>Book Titile</p>
-                    <button>Remove</button>
-                </li>
+            <div id="bokklist_div">
+                <h1 class="main_titlte">All awesome books</h1>
+                    <ul id="booklist">
+                        <li>
+                            <p>Book Titile</p>
+                            <button>Remove</button>
+                        </li>
 
-                <li>
-                    <p>Book Titile2</p>
-                    <button>Remove</button>
-                </li>
-            </ul>
+                        <li>
+                            <p>Book Titile2</p>
+                            <button>Remove</button>
+                        </li>
+                    </ul>
+            </div>
 
-            <hr>
 
-            <div>
+
+            <div id="addnew_div">
                   <h1 class="main_titlte">Add a new book</h1>
                   <form>
                     <div>
@@ -51,6 +53,21 @@
                     </div>
                     <button id="btn" type="submit">Add</button>
                   </form>
+              </div>
+
+
+
+              <div id="contact_div">
+                <h1 class="main_titlte">Contact Information</h1>
+                <p>
+                  Do you have any questions or you just want to say "Hello"? <br />
+                  You can reach out to us!
+                </p>
+                <ul>
+                  <li>Our e-mail: mail@mail.com</li>
+                  <li>Our phone number: 0043586534422</li>
+                  <li>Our adress: Streetname 22, 84503 City, Country</li>
+                </ul>
               </div>
           
         </main>
