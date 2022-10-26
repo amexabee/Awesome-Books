@@ -1,36 +1,26 @@
-/* eslint no-use-before-define: ["error", {"functions":false}] */
+/* eslint-disable no-undef */
 
 const bookListView = document.getElementById('booklist');
 
-let bookList = JSON.parse(localStorage.getItem('books'));
-if (bookList == null) {
-  bookList = [];
-}
-
-function removeBook(book) {
-  bookList = bookList.filter(
-    (singleBook) => book.id !== singleBook.id,
-  );
-  localStorage.setItem('books', JSON.stringify(bookList));
-  initiew();
-}
-
 function initiew() {
   bookListView.innerHTML = '';
-  bookList.forEach((element) => {
+  const bookListManager = new BookListManger();
+  bookListManager.bookList.forEach((element) => {
     const liNode = document.createElement('li');
     const pNode = document.createElement('p');
-    const bookKText = document.createTextNode(element.name);
+    const bookKText = document.createTextNode(
+      `"${element.name}" by ${element.author}`,
+    );
     pNode.appendChild(bookKText);
     const buttonNode = document.createElement('button');
     const removeKText = document.createTextNode('Remove');
     buttonNode.appendChild(removeKText);
-
     buttonNode.addEventListener('click', (event) => {
       event.preventDefault();
-      removeBook(element);
+      bookListManager.removeBook(element, () => {
+        initiew();
+      });
     });
-
     liNode.appendChild(pNode);
     liNode.appendChild(buttonNode);
     bookListView.appendChild(liNode);

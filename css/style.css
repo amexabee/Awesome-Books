@@ -12,6 +12,13 @@ header {
   align-items: flex-end;
 }
 
+hr {
+  width: 100px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-top: 4px solid black;
+}
+
 main {
   text-align: center;
 }
@@ -27,13 +34,25 @@ main {
 
 #booklist {
   list-style: none;
+  border: 2px solid black;
+  padding-inline-start: 0;
+  margin-bottom: 10px;
 }
 
 #booklist > li {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
-  padding: 5px;
+}
+
+#booklist > li > button {
+  max-height: 30px;
+  margin: auto 0;
+  margin-right: 5px;
+}
+
+#booklist > li > p {
+  margin-left: 5px;
 }
 
 #booklist > li:nth-child(odd) {
@@ -52,9 +71,22 @@ main {
 
 .main_titlte {
   margin: auto;
+  margin-bottom: 10px;
 }
 
 footer {
   margin-top: 20px;
   border: 2px black solid;
+}
+
+#title,
+#author {
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#btn {
+  padding: 5px;
+  margin-left: 140px;
 }
