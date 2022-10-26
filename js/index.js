@@ -27,10 +27,34 @@ function initiew() {
   });
 }
 
+function setUpNav() {
+  document.getElementById('home').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('bokklist_div').style.display = 'block';
+    document.getElementById('addnew_div').style.display = 'none';
+    document.getElementById('contact_div').style.display = 'none';
+  });
+
+  document.getElementById('addnew').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('bokklist_div').style.display = 'none';
+    document.getElementById('addnew_div').style.display = 'block';
+    document.getElementById('contact_div').style.display = 'none';
+  });
+
+  document.getElementById('contact').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('bokklist_div').style.display = 'none';
+    document.getElementById('addnew_div').style.display = 'none';
+    document.getElementById('contact_div').style.display = 'block';
+  });
+}
+
 window.addEventListener(
   'load',
   () => {
     initiew();
+    setUpNav();
   },
   false,
 );

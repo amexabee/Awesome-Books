@@ -77,6 +77,9 @@ main {
 footer {
   margin-top: 20px;
   border: 2px black solid;
+  position: fixed;
+  bottom: 0;
+  width: 50%;
 }
 
 #title,
@@ -89,4 +92,19 @@ footer {
 #btn {
   padding: 5px;
   margin-left: 140px;
+}
+
+#addnew_div {
+  display: none;
+}
+
+#contact_div {
+  display: none;
+  text-align: left;
+  padding-left: 50px;
+}
+
+#contact_div .main_titlte {
+  text-align: center;
+  padding-bottom: 20px;
 }
