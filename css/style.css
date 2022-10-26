@@ -78,7 +78,7 @@ footer {
   margin-top: 20px;
   border: 2px black solid;
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   width: 50%;
 }
 
